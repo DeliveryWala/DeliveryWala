@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:paddingTop="5dp"
+        android:id="@+id/Name" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Click Here"
+        android:textColorHint="@color/button_material_light"
+        android:ems="10"
+        android:id="@+id/namefield"
+        android:layout_below="@+id/Name"
+        android:paddingTop="5dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:paddingTop="5dp"
+        android:id="@+id/Email"
+        android:layout_below="@+id/namefield" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textWebEmailAddress"
+        android:hint="Click Here"
+        android:textColorHint="@color/button_material_light"
+        android:ems="10"
+        android:id="@+id/emailField"
+        android:layout_below="@+id/Email"
+        android:paddingTop="5dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile Number"
+        android:paddingTop="5dp"
+        android:id="@+id/Mobile"
+        android:layout_below="@+id/emailField"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="Click Here"
+        android:textColorHint="@color/button_material_light"
+        android:ems="10"
+        android:id="@+id/phone"
+        android:layout_below="@+id/Mobile"
+        android:paddingTop="5dp"
+        android:layout_gravity="center_horizontal" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:paddingTop="5dp"
+        android:id="@+id/password"
+        android:layout_below="@+id/phone"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Click Here"
+        android:textColorHint="@color/button_material_light"
+        android:paddingTop="5dp"
+        android:ems="10"
+        android:id="@+id/passwordField"
+        android:layout_below="@+id/password"
+        android:layout_gravity="center_horizontal" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="@color/app_white"
+        android:background="@color/app_default"
+        android:id="@+id/signupButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/passwordField"/>
+
+</LinearLayout>

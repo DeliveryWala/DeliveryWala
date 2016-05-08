@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <youth4work.androidprototype.youth4work.views.LeftDrawerLoginHeaderView
+            android:id="@+id/login_header_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+        <TextView
+            android:id="@+id/left_menu_discussions"
+            style="@style/left_menu_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Find a Ride"/>
+
+        <TextView
+            android:id="@+id/left_menu_ystories"
+            style="@style/left_menu_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/left_menu_jobs"
+            style="@style/left_menu_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="jobs"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/app_default"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/left_menu_profile"
+            style="@style/left_menu_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xxx"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/app_default"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/left_menu_tests"
+            style="@style/left_menu_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="left_menu_tests"
+            android:visibility="visible"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:background="@color/app_default"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/left_menu_feedback"
+            style="@style/left_menu_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="left_menu_feedback"/>
+
+        <TextView
+            android:id="@+id/left_menu_promote"
+            style="@style/left_menu_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="left_menu_promote"/>
+
+    </LinearLayout>
+</ScrollView>

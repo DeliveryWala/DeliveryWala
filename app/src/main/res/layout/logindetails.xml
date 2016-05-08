@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:paddingTop="5dp"
+        android:id="@+id/textView1" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textWebEmailAddress"
+        android:hint="Click Here"
+        android:textColorHint="@color/button_material_light"
+        android:ems="10"
+        android:id="@+id/emaillogin"
+        android:layout_below="@+id/textView1"
+        android:paddingTop="5dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:paddingTop="5dp"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/emaillogin"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Click Here"
+        android:textColorHint="@color/button_material_light"
+        android:paddingTop="5dp"
+        android:ems="10"
+        android:id="@+id/passwordlogin"
+        android:layout_below="@+id/textView2"
+        android:layout_gravity="center_horizontal" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remember me"
+        android:id="@+id/rememberLoginBox"
+        android:layout_below="@+id/passwordlogin"
+        android:checked="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="@color/app_white"
+        android:background="@color/app_default"
+        android:id="@+id/loginButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/rememberLoginBox"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textColor="@color/colorPrimaryDark"
+        android:paddingTop="5dp"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/loginButton"
+        android:textStyle="italic"
+        android:layout_gravity="center_horizontal"
+        android:onClick="ForgotPassword"
+        android:clickable="true"
+        />
+</LinearLayout>
