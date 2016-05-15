@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/dp16"
-    android:paddingRight="@dimen/dp16"
-    android:id="@+id/linearLayout">
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
 
-    <TextView
+    <include
+        layout="@layout/app_bar_main"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp48"
-        android:text="@string/app_name"
-        android:textSize="@dimen/text_large"
-        android:gravity="center"
-        android:layout_marginBottom="@dimen/dp4"/>
+        android:layout_height="match_parent" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/login_success_message"
-            android:gravity="center"
-            android:textSize="@dimen/text_medium"
-            android:layout_marginTop="@dimen/dp4"
-            android:layout_marginBottom="@dimen/dp16"/>
-        <Button
-            android:layout_width="@dimen/dp144"
-            android:layout_height="@dimen/dp48"
-            android:text="@string/logout_text"
-            android:id="@+id/logoutButton"
-            android:layout_marginTop="@dimen/dp16"
-            android:textSize="@dimen/text_medium"/>
-    </LinearLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+    </android.support.design.widget.AppBarLayout>
 
-</LinearLayout>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/logoutButton"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/menupager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</android.support.v4.widget.DrawerLayout>
