@@ -6,5 +6,5 @@
             android:id="@+id/imgLogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/splashscreen" />
+            android:src="@drawable/splashscreen1" />
     </LinearLayout>

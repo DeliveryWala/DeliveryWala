@@ -6,18 +6,18 @@ import android.graphics.Bitmap;
  * Created by Abhishek on 15-05-2016.
  */
 public class RowItem {
-    private Bitmap bt;
+    private String url;
         private String title;
 
-        public RowItem(Bitmap bt, String title) {
-            this.bt = bt;
+        public RowItem(String url, String title) {
+            this.url = url;
             this.title = title;
         }
-        public Bitmap getImageId() {
-            return bt;
+        public String getUrlId() {
+            return url;
         }
-        public void setImageId(Bitmap bt) {
-            this.bt = bt;
+        public void setUrlId(String url) {
+            this.url = url;
         }
         public String getTitle() {
             return title;

@@ -3,6 +3,10 @@ package com.example.abhishek.deliverywala.adapters;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.abhishek.deliverywala.activities.MainActivity;
 import com.example.abhishek.deliverywala.views.RestaurantView;
@@ -18,9 +22,16 @@ public class DownloadImage {
     public interface Callback {
         public void imageFetched(Bitmap bitmap);
     }
- static Bitmap bt2;
+ static ImageView img1;
+    public class ViewHolder {
+        ImageView restaurantimg;
+        TextView restaurantname;
 
-    public static Bitmap downloadBitmap(final Context context, final String url, final Callback callback) {
+    }
+
+
+    public static void downloadBitmap(final Context context, final String url, final Callback callback,final ImageView img) {
+
         Thread thread2 = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -32,7 +43,19 @@ public class DownloadImage {
                     int responseCode = connect1.getResponseCode();
                     if (responseCode == 200) {
                         Bitmap bt = BitmapFactory.decodeStream(connect1.getInputStream());
-                        bt2 = bt;
+                        final Bitmap bt2 = bt;
+                        if (callback != null) {
+
+                            ((MainActivity) context).runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+
+                                    img.setImageBitmap(bt2);
+                                    callback.imageFetched(bt2);
+                                            }
+                            });
+                        } else {
+                        }
                     }
                 } catch (Exception e) {
                 } finally {
@@ -44,5 +67,5 @@ public class DownloadImage {
 
         });
         thread2.start();
-    return bt2;}
+    }
 }
